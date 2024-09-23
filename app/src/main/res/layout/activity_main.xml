@@ -7,20 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/edtTitle"
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:hint="Note Title"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <EditText
-        android:id="@+id/edtDescription"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:hint="Note Description"
-        app:layout_constraintTop_toBottomOf="@id/edtTitle"/>
-
+        android:layout_height="match_parent"
+        android:id="@+id/rvNotes"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="50dp"
