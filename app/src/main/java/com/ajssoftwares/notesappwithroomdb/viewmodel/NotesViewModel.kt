@@ -1,8 +1,10 @@
-package com.ajssoftwares.notesappwithroomdb
+package com.ajssoftwares.notesappwithroomdb.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.ajssoftwares.notesappwithroomdb.db.NotesEntity
+import com.ajssoftwares.notesappwithroomdb.NotesRepo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

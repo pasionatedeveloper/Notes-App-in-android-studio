@@ -1,7 +1,8 @@
-package com.ajssoftwares.notesappwithroomdb
+package com.ajssoftwares.notesappwithroomdb.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.ajssoftwares.notesappwithroomdb.NotesRepo
 
 class NotesVMFactory(private var repo: NotesRepo) : ViewModelProvider.Factory {
 

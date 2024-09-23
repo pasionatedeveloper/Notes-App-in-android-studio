@@ -1,4 +1,4 @@
-package com.ajssoftwares.notesappwithroomdb
+package com.ajssoftwares.notesappwithroomdb.db
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

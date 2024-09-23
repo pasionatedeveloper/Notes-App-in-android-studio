@@ -1,4 +1,4 @@
-package com.ajssoftwares.notesappwithroomdb
+package com.ajssoftwares.notesappwithroomdb.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao

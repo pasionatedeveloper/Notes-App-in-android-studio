@@ -1,8 +1,8 @@
 package com.ajssoftwares.notesappwithroomdb
 
-import android.util.Log
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import com.ajssoftwares.notesappwithroomdb.db.NotesDAO
+import com.ajssoftwares.notesappwithroomdb.db.NotesEntity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

@@ -1,4 +1,4 @@
-package com.ajssoftwares.notesappwithroomdb
+package com.ajssoftwares.notesappwithroomdb.db
 
 import android.content.Context
 import androidx.room.Database

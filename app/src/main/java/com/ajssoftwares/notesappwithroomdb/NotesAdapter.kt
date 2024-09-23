@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ajssoftwares.notesappwithroomdb.databinding.SingleNoteItemBinding
+import com.ajssoftwares.notesappwithroomdb.db.NotesEntity
 
 class NotesAdapter(var context : Context, var notesList : ArrayList<NotesEntity>) :
 

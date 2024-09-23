@@ -1,4 +1,4 @@
-package com.ajssoftwares.notesappwithroomdb
+package com.ajssoftwares.notesappwithroomdb.ui.activities
 
 import android.annotation.SuppressLint
 import android.app.Dialog
@@ -7,26 +7,29 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBar.LayoutParams
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.ajssoftwares.notesappwithroomdb.NotesAdapter
+import com.ajssoftwares.notesappwithroomdb.db.NotesDatabase
+import com.ajssoftwares.notesappwithroomdb.db.NotesEntity
+import com.ajssoftwares.notesappwithroomdb.NotesRepo
+import com.ajssoftwares.notesappwithroomdb.viewmodel.NotesVMFactory
+import com.ajssoftwares.notesappwithroomdb.viewmodel.NotesViewModel
+import com.ajssoftwares.notesappwithroomdb.R
 import com.ajssoftwares.notesappwithroomdb.databinding.ActivityMainBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding : ActivityMainBinding
+    private lateinit var binding : ActivityMainBinding
 
-    var notesList = ArrayList<NotesEntity>()
+    private var notesList = ArrayList<NotesEntity>()
 
-    lateinit var viewModel : NotesViewModel
+    private lateinit var viewModel : NotesViewModel
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,8 +48,6 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this,factory)[NotesViewModel::class.java]
 
         viewModel.notesLiveData.observe(this){ list->
-
-            Log.d("android notes app", list?.size.toString())
 
             if(list?.isNotEmpty() == true){
                 notesList.clear()
@@ -77,6 +78,7 @@ class MainActivity : AppCompatActivity() {
                     return@setOnClickListener
                 }
                 addNote(title,description)
+                dialog.dismiss()
             }
         }
     }
